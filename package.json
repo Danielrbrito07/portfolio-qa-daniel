@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-qa-daniel",
+  "version": "1.0.0",
+  "description": "QA portfolio with automated tests and e2e documentation",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielrbrito07/portfolio-qa-daniel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Danielrbrito07/portfolio-qa-daniel/issues"
+  },
+  "homepage": "https://github.com/Danielrbrito07/portfolio-qa-daniel#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
