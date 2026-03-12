@@ -15,28 +15,39 @@ const filePath = path.join(docsDir, fileName);
 
 const content = `# ${docName}
 
-## Test Case ID
-TBD
+# Test Scenarios and Test Cases
 
-## Title
-Describe the test objective
+**Software:** Example Web Application
 
-## Preconditions
-- Add preconditions here
+**QA Responsible:** Your name here
 
-## Test Steps
-1. Step one
-2. Step two
-3. Step three
+**Date:** March 15, 2024
 
-## Expected Result
-- Describe the expected result
+## Scenario 01: Insert a descriptive title for the test scenario here
 
-## Priority
-Medium
+**Description**: Validade the checkout proccess.
 
-## Type
-Positive / Negative / Edge Case
+### Test Case 01: Name of the test case here
+| ID | Description |
+| :--------- | :---------- |
+| SC01-T01 | The checkout will be successful when the user inserts valid information. |
+
+| **Preconditions** |
+| :--------- |
+| The user must be logged in. |
+| The user must provide name, email, and postal code during checkout confirmation. |
+
+| **Steps** |
+| :--------- |
+| **GIVEN** that I am on the checkout page |
+| **AND** I enter a valid name, email and postal code into the confirmation fields |
+| **WHEN** I click the "Finish checkout" button |
+| **THEN** the message "Your purchase has been confirmed" is displayed |
+
+| **Acceptance Criteria** |
+| :--------- |
+| Success message displayed after completing the checkout and tax invoice sent to the user. |
+
 `;
 
 if (!fs.existsSync(docsDir)) {

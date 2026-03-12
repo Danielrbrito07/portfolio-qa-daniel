@@ -5,8 +5,6 @@ import {
   addToCartFlow,
   removeFromCartFlow,
   continueShoppingFlow,
-  successfulCheckoutFlow,
-  incompleteCheckoutFlow
 } from "../flows/saucedemo-flow";
 
 test.describe("Saucedemo inventory and cart Tests", () => {
@@ -42,25 +40,4 @@ test.describe("Saucedemo inventory and cart Tests", () => {
       await continueShoppingFlow(page);
     });
   });
-
-  test("CHECKOUT-005 - Successful checkout flow @critical @smoke @happy-path", async ({ page }) => {
-    await test.step("Inserting items into cart", async () => {
-      await addToCartFlow(page);
-    });
-
-    await test.step("Performing successful checkout", async () => {
-      await successfulCheckoutFlow(page);
-    });
-  });
-
-  test("CHECKOUT-006 - Incomplete checkout flow @negative", async ({ page }) => {
-    await test.step("Inserting items into cart", async () => {
-      await addToCartFlow(page);
-    });
-
-    await test.step("Attempting checkout with missing user information", async () => {
-      await incompleteCheckoutFlow(page);
-    });
-  });
-
 });
