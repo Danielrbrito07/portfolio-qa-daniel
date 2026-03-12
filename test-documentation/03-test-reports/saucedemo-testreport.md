@@ -1,25 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-
-const docName = process.argv[2];
-
-if (!docName) {
-  console.log('Please provide a document name.');
-  console.log('Example: npm run generate:testreport login-valid-user');
-  process.exit(1);
-}
-
-const docsDir = path.join(__dirname, '..', 'test-documentation', '03-test-reports');
-const fileName = `${docName}.md`;
-const filePath = path.join(docsDir, fileName);
-
-const content = `# ${docName}
+# saucedemo
 
 # Bug Report
 
-**Software:** Your Software Name Here
+**Software:** Saucedemo
 
-**QA Responsible:** Your name here
+**QA Responsible:** Daniel Brito
 
 **Date:** March 15, 2024
 
@@ -47,15 +32,3 @@ const content = `# ${docName}
 | :--------------: |
 | <insert medias here> |
 
-`;
-
-if (!fs.existsSync(docsDir)) {
-  fs.mkdirSync(docsDir, { recursive: true });
-}
-
-if (fs.existsSync(filePath)) {
-  console.log(`File already exists: ${filePath}`);
-} else {
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Markdown file created successfully: ${filePath}`);
-}
