@@ -10,26 +10,26 @@ import {
 
 test.describe("Saucedemo Login Tests", () => {
   test.describe("Positive Login Scenarios", () => {
-    test("T001 - Successful Login", async ({ page }) => {
+    test("LOGIN -001 - Successful Login @critical @smoke", async ({ page }) => {
       await loginFlow(page);
       await assertUserLogin(page);
     });
   });
 
   test.describe("Negative Login Scenarios", () => {
-    test("T002 - Invalid Login", async ({ page }) => {
+    test("LOGIN-002 - Invalid Login @negative", async ({ page }) => {
       await invalidLoginFlow(page);
     });
 
-    test("T003 - Locked Out User Login", async ({ page }) => {
+    test("LOGIN-003 - Locked Out User Login @negative", async ({ page }) => {
       await lockedOutLoginFlow(page);
     });
 
-    test("T004 - Empty Username Login", async ({ page }) => {
+    test("LOGIN-004 - Empty Username Login @negative", async ({ page }) => {
       await emptyUsernameFlow(page);
     });
 
-    test("T005 - Empty Password Login", async ({ page }) => {
+    test("LOGIN-005 - Empty Password Login @negative", async ({ page }) => {
       await emptyPasswordFlow(page);
     });
   });
