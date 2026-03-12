@@ -7,7 +7,7 @@ import {
   continueShoppingFlow,
   successfulCheckoutFlow,
   incompleteCheckoutFlow
-} from "../resources/saucedemo-flow";
+} from "../flows/saucedemo-flow";
 
 test.describe("Saucedemo inventory and cart Tests", () => {
   test.beforeEach(async ({ page }) => {
@@ -15,11 +15,11 @@ test.describe("Saucedemo inventory and cart Tests", () => {
     await assertUserLogin(page);
   });
 
-  test("Test001 - Add item to cart", async ({ page }) => {
+  test("CART-001 - Add item to cart @critical @smoke @happy-path", async ({ page }) => {
     await addToCartFlow(page);
   });
 
-  test("Test002 - Remove item from cart", async ({ page }) => {
+  test("CART-002 - Remove item from cart @happy-path", async ({ page }) => {
     await test.step("Inserting items into cart", async () => {
       await addToCartFlow(page);
     });
@@ -29,11 +29,11 @@ test.describe("Saucedemo inventory and cart Tests", () => {
     });
   });
 
-  test("Test003 - Continue shopping from cart", async ({ page }) => {
+  test("CART-003 - Continue shopping from cart @happy-path", async ({ page }) => {
     await continueShoppingFlow(page);
   });
 
-  test("Test004 - Add item then continue shopping from cart", async ({ page }) => {
+  test("CART-004 - Add item then continue shopping from cart @happy-path", async ({ page }) => {
     await test.step("Inserting items into cart", async () => {
       await addToCartFlow(page);
     });
@@ -43,7 +43,7 @@ test.describe("Saucedemo inventory and cart Tests", () => {
     });
   });
 
-  test("Test005 - Successful checkout flow", async ({ page }) => {
+  test("CHECKOUT-005 - Successful checkout flow @critical @smoke @happy-path", async ({ page }) => {
     await test.step("Inserting items into cart", async () => {
       await addToCartFlow(page);
     });
@@ -53,7 +53,7 @@ test.describe("Saucedemo inventory and cart Tests", () => {
     });
   });
 
-  test("Test006 - Incomplete checkout flow", async ({ page }) => {
+  test("CHECKOUT-006 - Incomplete checkout flow @negative", async ({ page }) => {
     await test.step("Inserting items into cart", async () => {
       await addToCartFlow(page);
     });

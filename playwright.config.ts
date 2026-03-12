@@ -26,11 +26,12 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: "html",
+  reporter:[['html', { open: 'always' }]],
 
   use: {
     baseURL: process.env.BASE_URL,
-    trace: "on-first-retry",
+    trace: "on",
+    screenshot: "on",
   },
 
   projects: [

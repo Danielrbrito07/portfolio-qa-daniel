@@ -3,14 +3,30 @@
   "version": "1.0.0",
   "description": "QA portfolio with automated tests and e2e documentation",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:critical": "playwright test --grep @critical",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:negative": "playwright test --grep @negative",
+    "test:hp": "playwright test --grep @happy-path",
+    "test:tag": "playwright test --grep",
+    "test:ui": "playwright test --ui",
+    "test:ui:tag": "playwright test --ui --grep",
+    "test:report": "playwright show-report",
+    "generate:testplan": "node scripts/generate-testplan.js",
+    "generate:testcase": "node scripts/generate-testcase.js",
+    "generate:testreport": "node scripts/generate-testreport.js",
+    "generate:testresult": "node scripts/generate-testresult.js"
+
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Danielrbrito07/portfolio-qa-daniel.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Danielrbrito07/portfolio-qa-daniel/issues"
