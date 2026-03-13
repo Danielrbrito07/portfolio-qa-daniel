@@ -31,15 +31,15 @@ The repository is structured to simulate how testing artifacts are organized in 
 portfolio-qa-daniel
 │
 ├── Test Documentation
-│ ├── Test Plan
-│ ├── Test Cases
-│ └── Test Reports
+│   ├── Test Plan
+│   ├── Test Cases
+│   └── Test Reports
 │
 ├── tests-e2e
-│ ├── flows
-│ ├── pages
-│ ├── specs
-│ └── utils
+│   ├── flows
+│   ├── pages
+│   ├── specs
+│   └── utils
 │
 └── README.md
 
