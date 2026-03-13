@@ -1,6 +1,7 @@
 [![Playwright](https://img.shields.io/badge/Playwright-E2E%20Testing-45ba63)](https://playwright.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Language-3178c6)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-Runtime-339933)](https://nodejs.org)
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF)](https://github.com/features/actions)
 [![QA Automation](https://img.shields.io/badge/QA-Automation-orange)](https://github.com/Danielrbrito07)
 [![Test Documentation](https://img.shields.io/badge/Test-Documentation-blue)](https://github.com/Danielrbrito07/portfolio-qa-daniel)
 
