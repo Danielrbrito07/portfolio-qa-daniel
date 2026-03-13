@@ -6,7 +6,7 @@ console.log("BASE_URL:", process.env.BASE_URL);
 
 // Environment file validation
 if (!process.env.BASE_URL) {
-  throw new Error("BASE_URL not defined in the .env file");
+  throw new Error("BASE_URL not defined. Set it locally in .env.saucedemo or in GitHub Actions.");
 }
 
 /**
