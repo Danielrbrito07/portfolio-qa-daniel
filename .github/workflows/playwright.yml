@@ -1,0 +1,49 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    env:
+      BASE_URL: ${{ vars.BASE_URL }}
+      SAUCEDEMO_STANDARD_USERNAME: ${{ secrets.SAUCEDEMO_STANDARD_USERNAME }}
+      SAUCEDEMO_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
+      SAUCEDEMO_INVALID_USERNAME: ${{ secrets.SAUCEDEMO_INVALID_USERNAME }}
+      SAUCEDEMO_LOCKED_OUT_USERNAME: ${{ secrets.SAUCEDEMO_LOCKED_OUT_USERNAME }}
+      SAUCEDEMO_FIRST_NAME: ${{ secrets.SAUCEDEMO_FIRST_NAME }}
+      SAUCEDEMO_LAST_NAME: ${{ secrets.SAUCEDEMO_LAST_NAME }}
+      SAUCEDEMO_POSTAL_CODE: ${{ secrets.SAUCEDEMO_POSTAL_CODE }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npm run test
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v5
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
