@@ -28,6 +28,8 @@ The repository is structured to simulate how testing artifacts are organized in 
 ---
 
 # Repository Structure
+
+```text
 portfolio-qa-daniel
 │
 ├── Test Documentation
@@ -42,7 +44,7 @@ portfolio-qa-daniel
 │   └── utils
 │
 └── README.md
-
+```
 
 ### Test Documentation
 
