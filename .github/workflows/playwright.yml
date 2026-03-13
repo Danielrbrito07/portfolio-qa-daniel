@@ -13,8 +13,9 @@ jobs:
 
     env:
       BASE_URL: ${{ vars.BASE_URL }}
-      LOGIN_VALID_USERNAME: ${{ secrets.LOGIN_VALID_USERNAME }}
-      LOGIN_VALID_PASSWORD: ${{ secrets.LOGIN_VALID_PASSWORD }}
+      LOGIN_VALID_USERNAME: ${{ secrets.SAUCEDEMO_STANDARD_USERNAME }}
+      LOGIN_VALID_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD}}
+
 
 
     steps:
