@@ -105,7 +105,11 @@ git clone https://github.com/Danielrbrito07/portfolio-qa-daniel.git
 
 npm install
 
-### 3 - run tests
+### 3 - Install playwright browsers
+
+npx playwright install
+
+### 4 - run tests
 
 npm run test
 

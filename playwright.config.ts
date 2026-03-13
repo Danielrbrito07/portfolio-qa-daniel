@@ -49,7 +49,7 @@ export default defineConfig({
       testIgnore: /.*\.setup\.ts/,
       use: {
         ...devices["Desktop Chrome"],
-        storageState: "playwright/.auth/user.json",
+        // storageState: "playwright/.auth/user.json",
       },
     },
 
