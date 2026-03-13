@@ -6,19 +6,27 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
     "test:critical": "playwright test --grep @critical",
     "test:smoke": "playwright test --grep @smoke",
     "test:negative": "playwright test --grep @negative",
     "test:hp": "playwright test --grep @happy-path",
     "test:tag": "playwright test --grep",
-    "test:ui": "playwright test --ui",
-    "test:ui:tag": "playwright test --ui --grep",
-    "test:report": "playwright show-report",
+
+
     "generate:testplan": "node scripts/generate-testplan.js",
     "generate:testcase": "node scripts/generate-testcase.js",
     "generate:testreport": "node scripts/generate-testreport.js",
-    "generate:testresult": "node scripts/generate-testresult.js"
+    "generate:testresult": "node scripts/generate-testresult.js",
 
+
+    "install:browsers": "playwright install"
   },
   "repository": {
     "type": "git",

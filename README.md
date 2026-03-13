@@ -1,168 +1,196 @@
-# QA Portfolio – Daniel Rodrigues
+[![Playwright](https://img.shields.io/badge/Playwright-E2E%20Testing-45ba63)](https://playwright.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Language-3178c6)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-Runtime-339933)](https://nodejs.org)
+[![QA Automation](https://img.shields.io/badge/QA-Automation-orange)](https://github.com/Danielrbrito07)
+[![Test Documentation](https://img.shields.io/badge/Test-Documentation-blue)](https://github.com/Danielrbrito07/portfolio-qa-daniel)
 
-This repository contains examples of my work as a **Quality Assurance Engineer**, including both **test documentation artifacts** and **automated end-to-end tests**.
+# QA Portfolio – Daniel Brito
 
-The goal of this project is to demonstrate a complete QA workflow, covering both **test strategy and execution** as well as **test automation practices**.
+This repository contains my **Software Quality Assurance portfolio**, showcasing practical examples of **test documentation, test strategy, and automated testing**.
 
-# Goals of This Portfolio
-
-This repository was created to demonstrate:
-
-- Structured QA documentation
-- Test case design practices
-- Automated testing architecture
-- Maintainable Playwright automation
-- End-to-end validation of user flows
+The goal of this project is to demonstrate my approach to **software quality, testing processes, and automation practices** used in real-world environments.
 
 ---
 
-# Project Overview
+# About this Repository
 
-This portfolio is divided into two main sections:
+This portfolio was created to demonstrate my skills as a **Quality Assurance Analyst**, including:
 
-1. **Test Documentation**
-2. **Automated E2E Tests**
-
-Together, they represent how QA activities are performed throughout the Software Development Lifecycle (SDLC).
-
----
-
-# Test Documentation
-
-The `test-documentation` folder contains examples of key QA artifacts used during the testing process.
-
-These artifacts demonstrate how testing activities are planned, documented, and reported.
-
-## Structure
-
-test-documentation/
-│
-├── 01-test-plans/
-│   Example of structured Test Plans
-│
-├── 02-test-cases/
-│   Detailed test case documentation
-│
-├── 03-test-reports/
-│   Test execution reports and summaries
-│
-└── 04-test-results/
-    Test execution evidence and results
-
-    
-These documents showcase QA practices such as:
-
-- Test planning
+- Test planning and test strategy
+- Manual testing
 - Test case design
-- Risk-based testing
-- Test execution reporting
-- Traceability between requirements and tests
+- Bug reporting
+- Automated testing with Playwright
+- Test documentation and reporting
+
+The repository is structured to simulate how testing artifacts are organized in real QA projects.
 
 ---
 
-# Automated E2E Tests
+# Repository Structure
+portfolio-qa-daniel
+│
+├── Test Documentation
+│ ├── Test Plan
+│ ├── Test Cases
+│ └── Test Reports
+│
+├── tests-e2e
+│ ├── flows
+│ ├── pages
+│ ├── specs
+│ └── utils
+│
+└── README.md
 
-The `tests-e2e` folder contains automated end-to-end tests implemented using **Playwright and TypeScript**.
 
-The automation framework follows a modular structure designed to improve **readability, maintainability, and reusability**.
+### Test Documentation
 
-## Tech Stack
+Contains examples of professional QA documentation:
+
+- **Test Plan**
+- **Test Cases**
+- **Test Strategy**
+- **Test Reports**
+
+These documents demonstrate how testing activities are planned, executed, and reported.
+
+---
+
+# Automated Testing
+
+Automated tests were implemented using:
+
+- **Playwright**
+- **TypeScript**
+
+The automation focuses on **End-to-End (E2E) testing**, validating key user flows and ensuring system behavior from an end-user perspective.
+
+Examples of tested flows include:
+
+- Login
+- Product interaction
+- Checkout process
+- Error validations
+
+---
+
+# Technologies Used
 
 - Playwright
 - TypeScript
 - Node.js
+- Git
+- GitHub
+
+Testing concepts applied:
+
+- End-to-End Testing
+- Functional Testing
+- Negative Testing
+- Regression Testing
+- Test Documentation
 
 ---
 
-# Test Automation Architecture
+# How to Run the Tests
 
-The automation framework is structured using principles such as:
+### 1 Clone the repository
 
-- **Page Object Model (POM)**
-- **Reusable test flows**
-- **Utility helpers**
-- **Typed constants and enums**
+git clone https://github.com/Danielrbrito07/portfolio-qa-daniel.git
 
-## Folder Structure
-tests-e2e/
-│
-├── pages/
-│   Page Object classes containing locators and page interactions
-│
-├── flows/
-│   Reusable business flows (login, cart actions, checkout)
-│
-└── saucedemo-tests/
-    Automated test scenarios
+### 2 Install dependencies
 
-    
----
+npm install
 
-# Example Automated Scenarios
+### 3 run tests
 
-The automated tests cover important user flows of the **Saucedemo application**, including:
+npm run test
 
-- User login
-- Adding items to the cart
-- Removing items from the cart
-- Continuing shopping
-- Checkout process
-- Validation of incomplete checkout scenarios
+# Avaiable Scripts
 
-These tests demonstrate how E2E automation can validate critical user journeys.
+This project includes scripts for test execution and test documentation generation.
 
----
+## Test Execution
 
-# Running the Automation Tests
+The following scripts run automated tests using Playwright.
 
-### Install dependencies
-- npm install
+| Script                | Description                           |
+| --------------------- | ------------------------------------- |
+| `npm run test`        | Runs all automated tests              |
+| `npm run test:headed` | Runs tests with the browser visible   |
+| `npm run test:ui`     | Runs tests in Playwright UI mode      |
+| `npm run test:report` | Opens the Playwright HTML test report |
 
+### Cross-Browser Testing
 
-### Install Playwright browsers
-- npx playwright install
+| Script                  | Description            |
+| ----------------------- | ---------------------- |
+| `npm run test:chromium` | Runs tests in Chromium |
+| `npm run test:firefox`  | Runs tests in Firefox  |
+| `npm run test:webkit`   | Runs tests in WebKit   |
 
+### Tagged Test Execution
 
-### Run all tests
-- npx playwright test
+These scripts allow running specific test groups using tags.
 
-### Run tests in UI mode
-- npx playwright test --ui
+| Script                  | Description                          |
+| ----------------------- | ------------------------------------ |
+| `npm run test:critical` | Runs tests tagged with **@critical** |
+| `npm run test:smoke`    | Runs smoke tests                     |
+| `npm run test:negative` | Runs negative test scenarios         |
+| `npm run test:hp`       | Runs happy path tests                |
+| `npm run test:tag`      | Runs tests filtered by a custom tag  |
 
----
+## Test Documentation Generation
 
-# Test Reports
+The following scripts generate QA documentation artifacts.
 
-Playwright automatically generates execution reports.
+Each generated artifact is automatically saved in its corresponding directory inside the Test Documentation folder.
 
-To open the HTML report:
+| Script                               | Description                       | Output Directory                  |
+| ------------------------------------ | --------------------------------- | --------------------------------- |
+| `npm run generate:testplan <name>`   | Generates a Test Plan             | `Test Documentation/Test Plan`    |
+| `npm run generate:testcase <name>`   | Generates Test Case documentation | `Test Documentation/Test Cases`   |
+| `npm run generate:testreport <name>` | Generates a Test Report           | `Test Documentation/Test Reports` |
+| `npm run generate:testresult <name>` | Generates Test Result summaries   | `Test Documentation/Test Results` |
 
-- npx playwright show-report
-
-
-The report includes:
-
-- Test results
-- Execution steps
-- Error details
-- Screenshots and traces (on failure)
-
----
-
-# Environment Configuration
-
-Environment variables are managed through `.env` files.
+These scripts require a name parameter, which will be used as the name of the generated artifact.
 
 Example:
-- .env.example
 
+npm run generate:testplan checkout-feature
 
-These files allow different test configurations without modifying the test code.
+This command will generate a Test Plan document named checkout-feature and save it in the appropriate directory.
 
----
+# Test Documentation Examples
 
-# Author
+Inside the Test Documentation folder you will find examples of:
 
-Daniel Rodrigues  
-QA Engineer  
-Test Automation | API Testing | Playwright | Software Quality
+- Test Plans
+- Structured Test Cases
+- Acceptance Criteria
+- Bug Reports
+- Test Reports
+
+# Purpose of this Portfolio
+
+This repository aims to demonstrate:
+
+- Realistic QA documentation
+- Test design practices
+- Automation skills
+- Organization of testing artifacts
+- Quality-focused mindse
+
+# Future Improvements
+
+- API testing examples
+- CI/CD integration
+- Test coverage reports
+- Additional automation scenarios
+- Performance testing examples
+
+# Contact
+- [LinkedIn](https://www.linkedin.com/in/daniel-rodriguesbrito/)
+- [GitHub](https://github.com/Danielrbrito07)
