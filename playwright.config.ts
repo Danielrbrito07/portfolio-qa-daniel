@@ -16,7 +16,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI
-    ? [['dot'], ['html', { open: 'never' }]]
+    ? [['list'], ['html', { open: 'never' }]]
     : [['list'], ['html', { open: 'always' }]],
   
 
