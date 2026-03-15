@@ -32,8 +32,24 @@
     "type": "git",
     "url": "git+https://github.com/Danielrbrito07/portfolio-qa-daniel.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "qa",
+  "quality-assurance",
+  "test-automation",
+  "e2e-testing",
+  "playwright",
+  "playwright-testing",
+  "typescript",
+  "end-to-end-tests",
+  "automation-testing",
+  "testing-framework",
+  "qa-portfolio",
+  "software-testing",
+  "test-engineering",
+  "ci-cd",
+  "github-actions"
+  ],
+  "author": "Daniel Brito",
   "license": "MIT",
   "type": "commonjs",
   "bugs": {

@@ -16,8 +16,9 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI
-  ? [['dot'], ['html', { open: 'never' }]]
-  : [['html', { open: 'always' }]],
+    ? [['list'], ['html', { open: 'never' }]]
+    : [['list'], ['html', { open: 'always' }]],
+  
 
   use: {
     baseURL: process.env.BASE_URL,
