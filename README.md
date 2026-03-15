@@ -28,6 +28,28 @@ The repository is structured to simulate how testing artifacts are organized in 
 
 ---
 
+## System Under Test (SUT)
+
+This project uses the web application **SauceDemo** as the system under test.
+
+SauceDemo is a sample e-commerce platform commonly used for testing practice and QA automation exercises.
+
+🔗 Application URL: https://www.saucedemo.com/
+
+The automated tests validate critical user flows such as:
+
+- User authentication
+- Product inventory browsing
+- Cart management
+- Checkout process
+
+The goal of this project is to demonstrate a **realistic QA automation workflow**, including:
+
+- Test documentation
+- End-to-end test automation
+- CI pipeline execution
+- Structured test artifacts
+
 # Repository Structure
 
 ```text
@@ -188,15 +210,10 @@ This repository aims to demonstrate:
 - Test design practices
 - Automation skills
 - Organization of testing artifacts
-- Quality-focused mindse
+- Quality-focused mindsed
 
-# Future Improvements
+# Test Evidence
 
-- API testing examples
-- CI/CD integration
-- Test coverage reports
-- Additional automation scenarios
-- Performance testing examples
 
 # Contact
 - [LinkedIn](https://www.linkedin.com/in/daniel-rodriguesbrito/)
