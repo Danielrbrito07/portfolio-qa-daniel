@@ -2,7 +2,7 @@ import { defineConfig, devices } from "@playwright/test";
 import dotenv from "dotenv";
 
 dotenv.config({ path: ".env.saucedemo" });
-quiet: true;
+
 
 // Environment file validation
 if (!process.env.BASE_URL) {
@@ -41,7 +41,7 @@ export default defineConfig({
       testIgnore: /.*\.setup\.ts/,
       use: {
         ...devices["Desktop Chrome"],
-        // storageState: "playwright/.auth/user.json",
+        storageState: "playwright/.auth/user.json",
       },
     },
 

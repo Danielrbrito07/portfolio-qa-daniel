@@ -54,19 +54,34 @@ The goal of this project is to demonstrate a **realistic QA automation workflow*
 
 ```text
 portfolio-qa-daniel
+|
+├── .github
+│   └── workflows
+│       └── playwright.yml        # CI pipeline for automated tests
 │
-├── Test Documentation
-│   ├── Test Plan
-│   ├── Test Cases
-│   └── Test Reports
+├── test-documentation            # QA documentation examples
+│   ├── 01-test-plans
+│   ├── 02-test-cases
+│   ├── 03-test-reports
+│   └── 04-test-results
 │
-├── tests-e2e
-│   ├── flows
-│   ├── pages
-│   ├── specs
-│   └── utils
+├── tests-e2e                     # Playwright E2E automated tests
+│   ├── data                      
+│   ├── types                     
+│   ├── utils                     
+│   ├── pages                     
+│   ├── flows                     
+│   └── tests           
 │
-└── README.md
+├── scripts                       # Scripts to generate QA artifacts
+│   ├── generate-testplan.js
+│   ├── generate-testcases.js
+│   ├── generate-testreport.js
+│   └── generate-testresults.js
+│
+└── assets                        # Test evidence (screenshots, reports, videos)
+    ├── images
+    └── videos
 ```
 
 ### Test Documentation
@@ -141,7 +156,7 @@ npx playwright install
 
 npm run test
 
-# Avaiable Scripts
+# Available Scripts
 
 This project includes scripts for test execution and test documentation generation.
 
@@ -215,7 +230,7 @@ This repository aims to demonstrate:
 - Test design practices
 - Automation skills
 - Organization of testing artifacts
-- Quality-focused mindsed
+- Quality-focused mindset
 
 # Test Evidence
 
