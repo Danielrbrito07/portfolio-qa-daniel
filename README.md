@@ -116,6 +116,11 @@ Testing concepts applied:
 - Regression Testing
 - Test Documentation
 
+# Automation Framework Structure
+
+Below is an overview of the project structure used to organize the automated tests, documentation, and supporting utilities.
+
+![Framework Structure](assets/images/project-structure-complete.png)
 ---
 
 # How to Run the Tests
@@ -214,6 +219,33 @@ This repository aims to demonstrate:
 
 # Test Evidence
 
+The following images showcase the execution and reporting of the automated test suite.
+
+They include examples of the Playwright UI runner and the generated HTML reports, which provide detailed insights into test execution, including passed and failed tests, traces, and debugging information.
+
+These artifacts demonstrate how test results can be analyzed and validated in a real-world QA automation workflow.
+
+### UI Interface
+
+Example of automated tests running locally using Playwright UI interface.
+
+![Playwright UI Interface](assets/images/playwright-test-ui-mode.gif)
+
+### HTML Reporter
+
+Example of the HTML report generated after test execution, showing detailed results, test steps, and execution status.
+
+![Playwright Reporter](assets/images/playwright-test-report.png)
+![Playwright Login Test Report](assets/images/playwright-test-result-login001.png)
+![Playwright Checkout Test Report](assets/images/playwright-test-result-checkout001.png)
+
+### CI Pipeline Tests
+
+Example of the automated test suite being executed through a GitHub Actions CI pipeline.
+
+The pipeline installs dependencies, runs the Playwright test suite, and generates test reports as artifacts.
+
+![CI Tests Execution with Logs](assets/images/ci-pipeline-tests-with-logs.png)
 
 # Contact
 - [LinkedIn](https://www.linkedin.com/in/daniel-rodriguesbrito/)
