@@ -1,4 +1,12 @@
 import { expect, type Locator, type Page } from "@playwright/test";
+import { 
+  parsePrice, 
+  isSortedAscending, 
+  isSortedDescending,
+  isAlphabeticallyAscending,
+  isAlphabeticallyDescending
+} from "../utils/priceutils";
+import { ProductSortOption } from "../types/productSortOption";
 
 export class SaucedemoPage {
   readonly page: Page;
@@ -15,6 +23,7 @@ export class SaucedemoPage {
   readonly inventoryItems: Locator;
   readonly inventoryItemNames: Locator;
   readonly addToCartButton: Locator;
+  readonly productSortDropdown: Locator;
 
   // Cart page locators
   readonly cartBadge: Locator;
@@ -49,6 +58,7 @@ export class SaucedemoPage {
     this.inventoryItems = page.locator(".inventory_item");
     this.inventoryItemNames = page.locator('[data-test="inventory-item-name"]');
     this.addToCartButton = page.getByRole("button", { name: "Add to cart" });
+    this.productSortDropdown = page.locator('[data-test="product-sort-container"]');
 
 
     // Cart page
@@ -156,6 +166,44 @@ export async function emptyPassword(saucedemoPage: SaucedemoPage) {
   );
 }
 
+// Sort inventory items by price (low to high)
+export async function sortInventoryByPriceLowToHigh(saucedemoPage: SaucedemoPage) {
+  await expect(saucedemoPage.inventoryTitle).toBeVisible();
+  await saucedemoPage.productSortDropdown.selectOption(ProductSortOption.PRICE_LOW_HIGH);
+  const itemPrices = await saucedemoPage.page
+    .locator(".inventory_item_price")
+    .allTextContents();
+  const prices = itemPrices.map(parsePrice);
+  expect(isSortedAscending(prices)).toBeTruthy();
+}
+
+// Sort inventory items by price (high to low)
+export async function sortInventoryByPriceHighToLow(saucedemoPage: SaucedemoPage) {
+  await expect(saucedemoPage.inventoryTitle).toBeVisible();
+  await saucedemoPage.productSortDropdown.selectOption(ProductSortOption.PRICE_HIGH_LOW);
+  const itemPrices = await saucedemoPage.page
+    .locator(".inventory_item_price")
+    .allTextContents();
+  const prices = itemPrices.map(parsePrice);
+  expect(isSortedDescending(prices)).toBeTruthy();
+}
+
+// Sort inventory items by name (A to Z)
+export async function sortInventoryByNameAToZ(saucedemoPage: SaucedemoPage) {
+  await expect(saucedemoPage.inventoryTitle).toBeVisible();
+  await saucedemoPage.productSortDropdown.selectOption(ProductSortOption.NAME_ASC);
+  const itemNames = await saucedemoPage.inventoryItemNames.allTextContents();
+  expect(isAlphabeticallyAscending(itemNames)).toBeTruthy();
+}
+
+// Sort inventory items by name (Z to A)
+export async function sortInventoryByNameZToA(saucedemoPage: SaucedemoPage) {
+  await expect(saucedemoPage.inventoryTitle).toBeVisible();
+  await saucedemoPage.productSortDropdown.selectOption(ProductSortOption.NAME_DESC);
+  const itemNames = await saucedemoPage.inventoryItemNames.allTextContents();
+  expect(isAlphabeticallyDescending(itemNames)).toBeTruthy();
+}
+
 // Add first available product from inventory to cart
 export async function addFirstInventoryItemToCart(saucedemoPage: SaucedemoPage,) {
   await expect(saucedemoPage.inventoryTitle).toBeVisible();
@@ -224,3 +272,5 @@ export async function incompleteCheckout(saucedemoPage: SaucedemoPage) {
     "Error: First Name is required",
   );
 }
+
+
