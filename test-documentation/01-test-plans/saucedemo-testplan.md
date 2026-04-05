@@ -29,7 +29,7 @@ The testing activities aim to achieve the following goals:
 - Confirm that the checkout process works correctly from cart review to order completion.
 - Validate that the system properly handles invalid inputs and negative scenarios, such as incorrect credentials or incomplete checkout information.
 - Ensure the user interface elements behave correctly across supported browsers.
-- Verify that critical user flows (Login → Product Selection → Cart → Checkout) works reliably and without errors.
+- Verify that critical user flows (Login → Product Selection → Cart → Checkout) work reliably and without errors.
 - Identify potential usability issues or defects that could impact the user experience.
 - Ensure that automated end-to-end tests implemented with Playwright correctly validate the main user journeys of the application.
 ---
