@@ -17,8 +17,6 @@ test.describe("Saucedemo inventory and cart Tests", () => {
     await assertUserLogin(page);
   });
 
-  // Insert inventory tests here
-
   test("INVENTORY-001 - Sort inventory by price low to high @happy-path", async ({ page }) => {
     await sortInventoryByPriceLowToHighFlow(page);
   });
