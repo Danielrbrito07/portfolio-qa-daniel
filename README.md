@@ -152,6 +152,10 @@ npm install
 
 npx playwright install
 
+### 4 - Create .env.saucedemo file
+
+Create a `.env` file based on `.env.example`
+
 ### 4 - run tests
 
 npm run test
