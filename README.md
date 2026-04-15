@@ -156,7 +156,7 @@ npx playwright install
 
 Create a `.env` file based on `.env.example`
 
-### 4 - run tests
+### 5 - run tests
 
 npm run test
 
