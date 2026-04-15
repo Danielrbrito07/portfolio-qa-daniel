@@ -144,19 +144,23 @@ Below is an overview of the project structure used to organize the automated tes
 
 git clone https://github.com/Danielrbrito07/portfolio-qa-daniel.git
 
-### 2 - Install dependencies
+### 2 - Navigate to project folder
+
+cd portfolio-qa-daniel
+
+### 3 - Install dependencies
 
 npm install
 
-### 3 - Install playwright browsers
+### 4 - Install playwright browsers
 
 npx playwright install
 
-### 4 - Create .env.saucedemo file
+### 5 - Create .env.saucedemo file
 
 Create a `.env` file based on `.env.example`
 
-### 5 - run tests
+### 6 - run tests
 
 npm run test
 
