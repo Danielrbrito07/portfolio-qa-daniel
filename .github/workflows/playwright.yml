@@ -52,7 +52,7 @@ jobs:
       - name: Generate Playwright summary
         if: always()
         run: |
-          echo "## 🧪 Playwright Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## 🧪 Automated Test Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- Total: $(jq '.stats.total' playwright-results.json)" >> $GITHUB_STEP_SUMMARY
           echo "- Passed: $(jq '.stats.expected' playwright-results.json)" >> $GITHUB_STEP_SUMMARY
