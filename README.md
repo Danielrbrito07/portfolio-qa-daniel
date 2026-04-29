@@ -7,7 +7,7 @@
 
 # QA Portfolio – Daniel Brito
 
-🇧🇷 [Leia em Português](./README.ptBR.md)
+🇧🇷 [Leia em Português](./README-ptbr.md)
 
 This repository contains my **Software Quality Assurance portfolio**, showcasing practical examples of **test documentation, test strategy, and automated testing**.
 
