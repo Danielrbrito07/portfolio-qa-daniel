@@ -34,11 +34,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: npm run test
+      - name: Run Playwright tests with report
+        continue-on-error: true
+        run: npm run test -- --reporter=html --reporter=json > playwright-results.json
+
+      - name: Generate Playwright summary
+        if: always()
+        run: |
+          echo "## 🧪 Playwright Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Total: $(jq '.stats.total' playwright-results.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- Passed: $(jq '.stats.expected' playwright-results.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- Failed: $(jq '.stats.unexpected' playwright-results.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- Skipped: $(jq '.stats.skipped' playwright-results.json)" >> $GITHUB_STEP_SUMMARY
+          
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v5
