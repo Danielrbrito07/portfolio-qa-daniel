@@ -62,3 +62,38 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+      - name: Comment Playwright summary on PR
+        if: always () && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            const results = JSON.parse(fs.readFileSync('playwright-results.json', 'utf8'));
+            const stats = results.stats;
+
+            const passed = stats.expected || 0;
+            const failed = stats.unexpected || 0;
+            const skipped = stats.skipped || 0;
+            const flaky = stats.flaky || 0;
+            const total = passed + failed + skipped + flaky;
+
+            const body = `## 🧪 Playwright Test Summary
+
+            | Status | Count |
+            | ------ | ----- |
+            | ✅ Total | ${total} |
+            | ✔️ Passed | ${passed} |
+            | ❌ Failed | ${failed} |
+            | ⚠️ Flaky | ${flaky} |
+            | ⏭️ Skipped | ${skipped} |
+
+            _Generated automatically by GitHub Actions._`;
+
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });
