@@ -270,7 +270,7 @@ Example of the automated test suite being executed through a GitHub Actions CI p
 
 The pipeline installs dependencies, runs the Playwright test suite, and generates test reports as artifacts.
 
-![CI Tests Results](assets/images/ci-pipeline-tests-with-logs.png)
+![CI Tests Results](assets/images/ci-pipeline-tests-result.png)
 ![CI Tests Execution with Logs](assets/images/ci-pipeline-tests-with-logs.png)
 
 # Contact

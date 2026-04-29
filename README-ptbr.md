@@ -272,7 +272,7 @@ Exemplo do conjunto de testes automatizados sendo executado através de um pipel
 
 O pipeline instala dependências, executa o conjunto de testes Playwright e gera relatórios de testes como artefatos.
 
-![CI Tests Results](assets/images/ci-pipeline-tests-with-logs.png)
+![CI Tests Results](assets/images/ci-pipeline-tests-result.png)
 ![CI Tests Execution with Logs](assets/images/ci-pipeline-tests-with-logs.png)
 
 # Contato
