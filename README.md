@@ -7,6 +7,8 @@
 
 # QA Portfolio – Daniel Brito
 
+🇧🇷 [Leia em Português](./README.pt-BR.md)
+
 This repository contains my **Software Quality Assurance portfolio**, showcasing practical examples of **test documentation, test strategy, and automated testing**.
 
 The goal of this project is to demonstrate my approach to **software quality, testing processes, and automation practices** used in real-world environments.
@@ -90,8 +92,8 @@ Contains examples of professional QA documentation:
 
 - **Test Plan**
 - **Test Cases**
-- **Test Strategy**
 - **Test Reports**
+- **Test Results**
 
 These documents demonstrate how testing activities are planned, executed, and reported.
 
