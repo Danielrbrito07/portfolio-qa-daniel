@@ -16,7 +16,8 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI
-    ? [['list'], ['html', { open: 'never' }]]
+    ? [['list'], ['html', { open: 'never' }], 
+      ['json', { outputFile: 'playwright-results.json' }]]
     : [['list'], ['html', { open: 'always' }]],
   
 

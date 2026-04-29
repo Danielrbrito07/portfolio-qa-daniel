@@ -42,7 +42,7 @@ jobs:
 
       - name: Run Playwright tests with report
         continue-on-error: true
-        run: npm run test -- --reporter=html --reporter=json > playwright-results.json
+        run: npm run test
 
       - name: Generate Playwright summary
         if: always()
