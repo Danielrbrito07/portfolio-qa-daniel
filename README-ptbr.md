@@ -15,7 +15,7 @@ O objetivo deste projeto é demonstrar minha abordagem em relação à **qualida
 
 ---
 
-# Sobre este Repositório
+## Sobre este Repositório
 
 Este portfólio foi criado para demonstrar minhas habilidades como **Analista de Quality Assurance (QA)**, incluindo:
 
@@ -54,7 +54,7 @@ O objetivo é demonstrar um **fluxo realista de automação de QA**, incluindo:
 
 ---
 
-# Estrutura do Repositório
+## Estrutura do Repositório
 
 ```text
 portfolio-qa-daniel
@@ -88,7 +88,7 @@ portfolio-qa-daniel
     └── videos
 ``` 
 
-### Documentação de Teste
+## Documentação de Teste
 
 Contém exemplos de documentação profissional de QA:
 
@@ -101,7 +101,7 @@ Esses documentos demonstram como as atividades de teste são planejadas, executa
 
 ---
 
-# Testes Automatizados
+## Testes Automatizados
 
 Os testes automatizados foram implementados utilizando:
 
@@ -119,7 +119,7 @@ Exemplos de cenários testados:
 
 ---
 
-# Tecnologias Utilizadas
+### Tecnologias Utilizadas
 
 - Playwright
 - TypeScript
@@ -135,14 +135,42 @@ Conceitos de teste aplicados:
 - Testes de Regressão
 - Documentação de Testes
 
-# Estrutura do Framework de Automação
+### Estrutura do Framework de Automação
 
 Abaixo está uma visão geral da estrutura do projeto utilizada para organizar os testes automatizados, documentação e utilitários de suporte.
 
 ![Estrutura do Framework](assets/images/project-structure-complete.png)
 ---
 
-# Como Executar os Testes
+## Pré-requisitos
+
+Antes de executar este projeto, certifique-se de ter instalado em sua máquina:
+
+- [Node.js](https://nodejs.org/) (v18 ou superior)
+- npm (vem com o Node.js)
+- [Git](https://git-scm.com/)
+
+### Verificar instalação
+
+Execute os comandos abaixo para verificar se tudo está instalado corretamente:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+Se todos os comandos retornarem um número de versão, você está pronto para prosseguir.
+
+### Solução de problemas
+
+- `npm: command not found` → Instale o Node.js
+- `git: command not found` → Instale o Git
+
+Se algum comando não for reconhecido, instale a dependência ausente e reinicie seu terminal.
+
+
+## Como Executar os Testes
 
 ### 1 - Clone o repositório
 
@@ -162,17 +190,17 @@ npx playwright install
 
 ### 5 - Crie o arquivo .env.saucedemo
 
-Crie um arquivo `.env` seguindo o env exemplo `.env.example`
+Crie um arquivo `.env.saucedemo` seguindo o env exemplo `.env.example`
 
 ### 6 - Execute os testes
 
 npm run test
 
-# Scripts Disponíveis
+## Scripts Disponíveis
 
 Este projeto inclui scripts para execução de testes e geração de documentação de testes.
 
-## Execução de Testes
+### Execução de Testes
 
 Os seguintes scripts executam testes automatizados usando Playwright.
 
@@ -183,7 +211,7 @@ Os seguintes scripts executam testes automatizados usando Playwright.
 | `npm run test:ui`     | Executa testes no modo UI do Playwright |
 | `npm run test:report` | Abre o relatório HTML de testes do Playwright |
 
-### Testes Cross-Browser
+#### Testes Cross-Browser
 
 | Script                  | Descrição              |
 | ----------------------- | ---------------------- |
@@ -191,7 +219,7 @@ Os seguintes scripts executam testes automatizados usando Playwright.
 | `npm run test:firefox`  | Executa testes no Firefox  |
 | `npm run test:webkit`   | Executa testes no WebKit   |
 
-### Execução de Testes com Tags
+#### Execução de Testes com Tags
 
 Estes scripts permitem executar grupos específicos de testes usando tags.
 
@@ -203,7 +231,7 @@ Estes scripts permitem executar grupos específicos de testes usando tags.
 | `npm run test:hp`       | Executa testes do "caminho feliz"       |
 | `npm run test:tag`      | Executa testes filtrados por uma tag personalizada |
 
-## Geração de Documentação de Testes
+### Geração de Documentação de Testes
 
 Os seguintes scripts geram artefatos de documentação de QA.
 
@@ -224,7 +252,7 @@ npm run generate:testplan checkout-feature
 
 Este comando gerará um documento de Plano de Teste nomeado checkout-feature e o salvará no diretório apropriado.
 
-# Exemplos de Documentação de Teste
+## Exemplos de Documentação de Teste
 
 Dentro da pasta Documentação de Testes você encontrará exemplos de:
 
@@ -234,7 +262,7 @@ Dentro da pasta Documentação de Testes você encontrará exemplos de:
 - Relatórios de Bugs
 - Relatórios de Teste
 
-# Propósito deste Portfólio
+## Propósito deste Portfólio
 
 Este repositório tem como objetivo demonstrar:
 
@@ -275,6 +303,6 @@ O pipeline instala dependências, executa o conjunto de testes Playwright e gera
 ![CI Tests Results](assets/images/ci-pipeline-tests-result.png)
 ![CI Tests Execution with Logs](assets/images/ci-pipeline-tests-with-logs.png)
 
-# Contato
+## Contato
 - [LinkedIn](https://www.linkedin.com/in/daniel-rodriguesbrito/)
 - [GitHub](https://github.com/Danielrbrito07)

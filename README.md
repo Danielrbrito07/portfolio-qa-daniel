@@ -15,7 +15,7 @@ The goal of this project is to demonstrate my approach to **software quality, te
 
 ---
 
-# About this Repository
+## About this Repository
 
 This portfolio was created to demonstrate my skills as a **Quality Assurance Analyst**, including:
 
@@ -52,7 +52,7 @@ The goal of this project is to demonstrate a **realistic QA automation workflow*
 - CI pipeline execution
 - Structured test artifacts
 
-# Repository Structure
+## Repository Structure
 
 ```text
 portfolio-qa-daniel
@@ -86,7 +86,7 @@ portfolio-qa-daniel
     └── videos
 ```
 
-### Test Documentation
+## Test Documentation
 
 Contains examples of professional QA documentation:
 
@@ -99,7 +99,7 @@ These documents demonstrate how testing activities are planned, executed, and re
 
 ---
 
-# Automated Testing
+## Automated Testing
 
 Automated tests were implemented using:
 
@@ -117,7 +117,7 @@ Examples of tested flows include:
 
 ---
 
-# Technologies Used
+### Technologies Used
 
 - Playwright
 - TypeScript
@@ -133,14 +133,41 @@ Testing concepts applied:
 - Regression Testing
 - Test Documentation
 
-# Automation Framework Structure
+### Automation Framework Structure
 
 Below is an overview of the project structure used to organize the automated tests, documentation, and supporting utilities.
 
 ![Framework Structure](assets/images/project-structure-complete.png)
 ---
 
-# How to Run the Tests
+## Prerequisites
+
+Before running this project, make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm (comes with Node.js)
+- [Git](https://git-scm.com/)
+
+### Verify installation
+
+Run the commands below to check if everything is installed correctly:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+If all commands return a version number, you're good to go. 
+
+### Troubleshooting
+
+- `npm: command not found` → Install Node.js
+- `git: command not found` → Install Git
+
+If any command is not recognized, install the missing dependency and restart your terminal.
+
+## How to Run the Tests
 
 ### 1 - Clone the repository
 
@@ -160,17 +187,17 @@ npx playwright install
 
 ### 5 - Create .env.saucedemo file
 
-Create a `.env` file based on `.env.example`
+Create a `.env.saucedemo` file based on `.env.example`
 
 ### 6 - run tests
 
 npm run test
 
-# Available Scripts
+## Available Scripts
 
 This project includes scripts for test execution and test documentation generation.
 
-## Test Execution
+### Test Execution
 
 The following scripts run automated tests using Playwright.
 
@@ -181,7 +208,7 @@ The following scripts run automated tests using Playwright.
 | `npm run test:ui`     | Runs tests in Playwright UI mode      |
 | `npm run test:report` | Opens the Playwright HTML test report |
 
-### Cross-Browser Testing
+#### Cross-Browser Testing
 
 | Script                  | Description            |
 | ----------------------- | ---------------------- |
@@ -189,7 +216,7 @@ The following scripts run automated tests using Playwright.
 | `npm run test:firefox`  | Runs tests in Firefox  |
 | `npm run test:webkit`   | Runs tests in WebKit   |
 
-### Tagged Test Execution
+#### Tagged Test Execution
 
 These scripts allow running specific test groups using tags.
 
@@ -201,7 +228,7 @@ These scripts allow running specific test groups using tags.
 | `npm run test:hp`       | Runs happy path tests                |
 | `npm run test:tag`      | Runs tests filtered by a custom tag  |
 
-## Test Documentation Generation
+### Test Documentation Generation
 
 The following scripts generate QA documentation artifacts.
 
@@ -222,7 +249,7 @@ npm run generate:testplan checkout-feature
 
 This command will generate a Test Plan document named checkout-feature and save it in the appropriate directory.
 
-# Test Documentation Examples
+## Test Documentation Examples
 
 Inside the Test Documentation folder you will find examples of:
 
@@ -232,7 +259,7 @@ Inside the Test Documentation folder you will find examples of:
 - Bug Reports
 - Test Reports
 
-# Purpose of this Portfolio
+## Purpose of this Portfolio
 
 This repository aims to demonstrate:
 
@@ -242,7 +269,7 @@ This repository aims to demonstrate:
 - Organization of testing artifacts
 - Quality-focused mindset
 
-# Test Evidence
+## Test Evidence
 
 The following images showcase the execution and reporting of the automated test suite.
 
@@ -273,6 +300,6 @@ The pipeline installs dependencies, runs the Playwright test suite, and generate
 ![CI Tests Results](assets/images/ci-pipeline-tests-result.png)
 ![CI Tests Execution with Logs](assets/images/ci-pipeline-tests-with-logs.png)
 
-# Contact
+## Contact
 - [LinkedIn](https://www.linkedin.com/in/daniel-rodriguesbrito/)
 - [GitHub](https://github.com/Danielrbrito07)
