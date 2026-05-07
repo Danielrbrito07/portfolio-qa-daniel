@@ -59,7 +59,7 @@ portfolio-qa-daniel
 |
 ├── .github
 │   └── workflows
-│       └── playwright.yml        # CI pipeline for automated tests
+│       └── ci-tests.yml        # CI pipeline for automated tests
 │
 ├── test-documentation            # QA documentation examples
 │   ├── 01-test-plans
