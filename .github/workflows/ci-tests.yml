@@ -12,7 +12,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  ci tests:
+  ci-tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
